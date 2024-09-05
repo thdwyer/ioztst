@@ -1,4 +1,9 @@
 # ioztst
+Use the [Code] button above to get the formatting back.  Sorry I know
+virtually nothing about git as you'll understand when you download
+and have to jump through hoops to extract the files in their correct
+directories.
+
 This is a bash script to help people unfamiliar with iozone to develop useful
 disk/array performance data.
 
