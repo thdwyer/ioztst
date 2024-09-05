@@ -25,3 +25,12 @@ I started to develop the script.  It grew way beyond my original intent before
 I knew it.  I intend to provide the ability to use some of the functions iozone
 provides for the more complex requirements of larger arrays used for example in
 home media servers.
+
+Please note that none of these bash scripts delete files or directories, only 
+copy, move or create them, so there should be little or no danger to your system.
+There is no uninstall script for the same reason.  If you want to uninstall the
+scripts, files and directories, look at the install script for the locations 
+of everything you want to remove.
+
+It's possible to run this script without installing iozone.  It will give you an
+idea of the things it can do.  To run without calling iozone: ioztst.sh no
