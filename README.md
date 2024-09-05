@@ -1,8 +1,11 @@
 # ioztst
-Use the [Code] button above to get the formatting back.  Sorry I know
-virtually nothing about git as you'll understand when you download
-and have to jump through hoops to extract the files in their correct
-directories.
+Select the README.md and use the [Code] button above to get the 
+formatting back.  Sorry I know virtually nothing about git as you'll
+understand when you download and have to jump through hoops to extract
+the files in their correct directories.
+To download the actual package, hit the top left <>Code button and then
+the bright Green Code button.  Select the zip file option and look in
+your Downloads directory.
 
 This is a bash script to help people unfamiliar with iozone to develop useful
 disk/array performance data.
