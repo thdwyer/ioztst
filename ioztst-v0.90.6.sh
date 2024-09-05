@@ -61,19 +61,19 @@ datevar=`date | sed '{s/ /_/g}'`
 
 clear
 
-# Just to be clear, yu should not do too much testing
-# on an SSD or you might shorten the life of it
+# Just to be clear, you should not do too much testing
+# on an SSD or you might shorten it's life.
 # It's much preferable to use a spinning drive
 # The faster the better.
-# Your home directory - don't use tghis much if it's on an SSD
+# Your home directory - don't use this much if it's on an SSD
 # basedir=$HOME
 # Examples ZFS array on another machine
-# basedir=/media/tdwyer/usbarray/
+# basedir=/media/$USER/usbarray/
 # Used for testing on my fstab mounted CIFS share on the media server ZFS arraay
 # basedir=$HOME/Desktop/Media
 # this is a Hitachi drive I use for backups and some storage
-# "/media/tdwyer/Hitachi 4TB #1"
-# basedir="/media/tdwyer/Hitachi 4TB #1"
+# "/media/$USER/Hitachi 4TB #1"
+# basedir="/media/$USER/Hitachi 4TB #1"
 
 
 # Read in the variables from the config file
