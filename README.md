@@ -25,7 +25,7 @@ intended to be installed or run as root.
 This was built for Linux Mint 21.x and 22. It should be simple enough
 to install it on most other distros.  It requires a number of directories:
    $HOME/bin          This will be created if you don't have it
-   $HOME/Downloads    You may want to create this directory manually.
+   $HOME/Downloads    You this directory should already be present.
    $HOME/Documents    This is the preferred location for iozone's output files
    $HOME/.config
    and of course your basedir directory (keep reading)
