@@ -1,7 +1,7 @@
 # ioztst
-Select the README.md and use the [Code] button above to get the 
-formatting back.  Sorry I know virtually nothing about git as you'll
-understand when you download and have to jump through hoops to extract
+Select the README.md and use either the [Code] or the [Raw] button above
+to get the formatting back.  Sorry I know virtually nothing about git as
+you'll understand when you download and have to jump through hoops to extract
 the files in their correct directories.
 
 The best way to download the parts of the repository you need is to select
