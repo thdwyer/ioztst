@@ -3,9 +3,14 @@ Select the README.md and use the [Code] button above to get the
 formatting back.  Sorry I know virtually nothing about git as you'll
 understand when you download and have to jump through hoops to extract
 the files in their correct directories.
-To download the actual package, hit the top left <>Code button and then
-the bright Green Code button.  Select the zip file option and look in
-your Downloads directory.
+
+The best way to download the parts of the repository you need is to select
+the two tar.gz files one at a time anywhere you see the list of files 
+available. In the right hand panel near the top there are a number of icons,
+Look for the one that looks like a tray with a down arrow pointing into
+it.  Click on this icon to download that file.  After you've downloaded both
+tar.gz files you have all you'll need to do the install.  See below for
+instructions.
 
 This is a bash script to help people unfamiliar with iozone to develop useful
 disk/array performance data.
@@ -14,21 +19,34 @@ It is intended for people who are not familiar with the command line
 and might even be long time linux users, but are mostly familiar with GUI
 tools for their day to day workflow.
 
+Please do not install or run these scripts using sudo. They are not
+intended to be installed or run as root.
+
 This was built for Linux Mint 21.x and 22. It should be simple enough
 to install it on most other distros.  It requires a number of directories:
-   $HOME/bin
-   $HOME/Downloads
+   $HOME/bin          This will be created if you don't have it
+   $HOME/Downloads    You may want to create this directory manually.
+   $HOME/Documents    This is the preferred location for iozone's output files
    $HOME/.config
    and of course your basedir directory (keep reading)
+   
 As long as you have these directories and know how to use your package
 manager to install iozone (whatever version is available for your distro)
 you shoild be golden.
 
-Installing: In the downloads directory extract the Install.sh.tar.gz
-            Copy the this file archive to your home directory and 
-            unarchive it there.
-            Next extract the ioztst-v0.90.6.tar.gz leave this file in
-            the downloads directory.  do not extract anything from it.
+The following directories will be created;
+   $HOME/tempiozextract  where the package files will be extracted to
+   $HOME/.config/ioztst  Base directory for the config and iozone files
+   $HOME/.config/ioztst/Default  / These two directories hold the
+   $HOME/.config/ioztst/Run      \ definition files that run iozone
+   $basedir/temptest     The filesystem you specify where the tests 
+                         will be performed
+
+Installing: In the downloads directory, extract the .sh file from the 
+            Install.sh.tar.gz.  Copy the this file to your home or 
+            $HOME/bin directory
+            Leave the ioztst-v0.90.6.tar.gz in the downloads directory.
+            Do not extract anything from it.
             In the directory where you extracted the Install.sh file,
             ensure it is executable (chmod +x Install.sh)
             You should prepare to edit the config file to enter a
@@ -36,7 +54,7 @@ Installing: In the downloads directory extract the Install.sh.tar.gz
             be given the opportunity to edit the config file while running
             the Install script. The modification you will need to make
             is termed the basedir and you will need to paste it into the
-            config file where the entry looks something like this:
+            config file where the entry should look something like this:
                   basedir=/mnt/$USER/devicerootdir
             Note that there is no '/' at the end of the directory name.
             There is already a sample entry you can overwrite:
@@ -46,14 +64,19 @@ Installing: In the downloads directory extract the Install.sh.tar.gz
             path.
             Return to wherever you extracted the Install.sh script. You
             should have already made it executable, so run it by typing:
+               Install.sh 
+            If you see: 'Install.sh: command not found', This means it isn't
+            in your path  In the directory where the Install.sh is located type:
                ./Install.sh 
-            ./ means it doesn't matter about what your $PATH is.  During the
-            install you will be shown a page of text you must read, and at 
-            the end of the page you will be offered the chance to edit the
-            config file.  here are instructions at the bottom of the page
+            ./ will force the script to run whatever your $PATH is.  During
+            the install you will be shown a page of text you must read, and
+            at the end of the page you will be offered the chance to edit 
+            the config file.  here are instructions at the bottom of the page
             about how to use the text editor, repeated here for you:
+                                 ---======---
        Do you want to edit the config file now (y/n)  <Ctrl>C to exit"
        If you do, <Ctrl><O> <Enter> writes the file out, <Ctrl><X> exits the editor:
+                                  ---======---      
             Begin the edit by typing 'y' and press <Enter>.  Look for the
             word [/EditThisString] and replace it by pasting your selected
             directory in it's place.  The line is not commented, so once you
