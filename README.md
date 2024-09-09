@@ -1,4 +1,9 @@
 # ioztst
+There is a new version of the install script that auto detects and
+performa an update after asking the owner's permission.  If there 
+is a previous install it will update the new config file with the
+user supplied basedir parameter from the existing config file.
+
 Select the README.md and use either the [Code] or the [Raw] button above
 to get the formatting back.  Sorry I know virtually nothing about git as
 you'll understand when you download and have to jump through hoops to extract
