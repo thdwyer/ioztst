@@ -1,6 +1,6 @@
 # ioztst
 There is a new version of the install script that auto detects and
-performa an update after asking the owner's permission.  If there 
+performs an update after asking the owner's permission.  If there 
 is a previous install it will update the new config file with the
 user supplied basedir parameter from the existing config file.
 
