@@ -15,7 +15,9 @@ selected from Option 8 at the main menu the perl script is named report.pl
 and instructions (from the author) are included at the top of the file.
 The file to use with this script is scrncap.txt which, at the moment
 will be dropped in your Documents directory along with the xls file 
-produced by iozone.
+produced by iozone.  In order to this script to produce a set of graphs
+the gnuplot package must be installed on your system. It should be
+available, like iozone, for almost every linux distro
 Until I get around to doing some further work on the Install script,
 you'll have to work out how to use it.
 Both the Install and ioztst files now have some command line switches
