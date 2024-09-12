@@ -1,16 +1,25 @@
 # ioztst
+Select the README.md and use either the [Code] or the [Raw] button above
+to get the formatting back.  Sorry I know virtually nothing about git as
+you'll understand when you download and have to jump through hoops to extract
+the files in their correct directories.
+
 There is a new version of the install script that auto detects and
 performs an update after asking the owner's permission.  If there 
 is a previous install it will update the new config file with the
 user supplied basedir parameter from the existing config file.
 
-Both the Install and ioztst files now have som command line switches
+Included in the archive is a perl script that can be used to produce 
+graphs when iozone is run in a specific mode: The full auto mode may be
+selected from Option 8 at the main menu the perl script is named report.pl
+and instructions (from the author) are included at the top of the file.
+The file to use with this script is scrncap.txt which, at the moment
+will be dropped in your Documents directory along with the xls file 
+produced by iozone.
+Until I get around to doing some further work on the Install script,
+you'll have to work out how to use it.
+Both the Install and ioztst files now have some command line switches
 that can be used with -[x] -h for help.
-
-Select the README.md and use either the [Code] or the [Raw] button above
-to get the formatting back.  Sorry I know virtually nothing about git as
-you'll understand when you download and have to jump through hoops to extract
-the files in their correct directories.
 
 The best way to download the parts of the repository you need is to select
 the two tar.gz files one at a time anywhere you see the list of files 
