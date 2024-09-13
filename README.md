@@ -23,6 +23,18 @@ you'll have to work out how to use it.
 Both the Install and ioztst files now have some command line switches
 that can be used with -[x] -h for help.
 
+For users with servers:  It's likely you won't have the usual home directory
+structure thet desktop machines have.  The installation of ioztst is predicated
+on a pattial desktop environment in your home directory - NOT root's home dir
+you need four directories, Downloads Documents .config and bin all in the case 
+shown here If these are not present the script and it's dependent dirs and files
+will fail and not be installed.  The ioztst-vx.xx.x.tar.gz should be left in the 
+Downloads directory.  A separate directory will be created to extract and keep 
+a copy of the current archived files.  This is necessary for any downloads of
+later versions that will attempt to do an auto upgrade.
+see the user guide in the Documents directory (after installation) for 
+instructions on how to include your /user/[$USER}/bin directory in your path. 
+
 The best way to download the parts of the repository you need is to select
 the two tar.gz files one at a time anywhere you see the list of files 
 available. In the right hand panel near the top there are a number of icons,
