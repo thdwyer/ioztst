@@ -4,6 +4,11 @@ to get the formatting back.  Sorry I know virtually nothing about git as
 you'll understand when you download and have to jump through hoops to extract
 the files in their correct directories.
 
+Important: Do NOT install and run these scripts with sudo or if you are
+logged in as root.  The scripts are intended to be run as a normal user
+you should not even be required to be in the adm (administrator) group
+except to install iozone and gnuplot.
+
 There is a new version of the install script that auto detects and
 performs an update after asking the owner's permission.  If there 
 is a previous install it will update the new config file with the
@@ -11,11 +16,15 @@ user supplied basedir parameter from the existing config file.
 
 Included in the archive is a perl script that can be used to produce 
 graphs when iozone is run in a specific mode: The full auto mode may be
-selected from Option 8 at the main menu the perl script is named report.pl
+selected from Option 8 at the main menu.  The perl script is named report.pl
 and instructions (from the author) are included at the top of the file.
+In the near future it will be able to handle iozone output files for four
+separate hosts, each individual graph containing the plots for all of the
+individual hosts.  Why four?  anyone with more than 4 machines to tweak
+performance on will be able to add as many instances as they like 8)
 The file to use with this script is scrncap.txt which, at the moment
 will be dropped in your Documents directory along with the xls file 
-produced by iozone.  In order to this script to produce a set of graphs
+produced by iozone.  In order to use this script to produce a set of graphs
 the gnuplot package must be installed on your system. It should be
 available, like iozone, for almost every linux distro
 Until I get around to doing some further work on the Install script,
@@ -25,8 +34,8 @@ that can be used with -[x] -h for help.
 
 For users with servers:  It's likely you won't have the usual home directory
 structure thet desktop machines have.  The installation of ioztst is predicated
-on a pattial desktop environment in your home directory - NOT root's home dir
-you need four directories, Downloads Documents .config and bin all in the case 
+on a partial desktop environment in your home directory - NOT root's home dir
+you need four directories, Downloads, Documents, .config and bin all in the case 
 shown here If these are not present the script and it's dependent dirs and files
 will fail and not be installed.  The Install.sh script will create all these 
 directories if they are not present.  The ioztst-vx.xx.x.tar.gz should be left
@@ -61,10 +70,12 @@ to install it on most other distros.  It requires a number of directories:
    $HOME/Documents    This is the preferred location for iozone's output files
    $HOME/.config
    and of course your basedir directory (keep reading)
-   
+
+If these required directories are not already there the install script will 
+create them
 As long as you have these directories and know how to use your package
 manager to install iozone (whatever version is available for your distro)
-you shoild be golden.
+and gnuplot you should be golden.
 
 The following directories will be created;
    $HOME/tempiozextract  where the package files will be extracted to
@@ -77,7 +88,7 @@ The following directories will be created;
 Installing: In the downloads directory, extract the .sh file from the 
             Install.sh.tar.gz.  Copy the this file to your home or 
             $HOME/bin directory
-            Leave the ioztst-v0.90.6.tar.gz in the downloads directory.
+            Leave the ioztst-vx.xx.x.tar.gz in the downloads directory.
             Do not extract anything from it.
             In the directory where you extracted the Install.sh file,
             ensure it is executable (chmod +x Install.sh)
@@ -87,11 +98,11 @@ Installing: In the downloads directory, extract the .sh file from the
             the Install script. The modification you will need to make
             is termed the basedir and you will need to paste it into the
             config file where the entry should look something like this:
-                  basedir=/mnt/$USER/devicerootdir
+                  basedir=/user/$USER/SomeDirectory
             Note that there is no '/' at the end of the directory name.
             There is already a sample entry you can overwrite:
                   # Basedir set to something innocuous
-                  basedir=/EditThisString
+                  basedir=EditThisString
             delete what follows the '=' and replace it with your directory
             path.
             Return to wherever you extracted the Install.sh script. You
@@ -108,9 +119,9 @@ Installing: In the downloads directory, extract the .sh file from the
                                  ---======---
        Do you want to edit the config file now (y/n)  <Ctrl>C to exit"
        If you do, <Ctrl><O> <Enter> writes the file out, <Ctrl><X> exits the editor:
-                                  ---======---      
+                                 ---======---      
             Begin the edit by typing 'y' and press <Enter>.  Look for the
-            word [/EditThisString] and replace it by pasting your selected
+            word [EditThisString] and replace it by pasting your selected
             directory in it's place.  The line is not commented, so once you
             have pasted the new value into the file save it <Ctrl><O> & <Enter>
             then exit the editor <Ctrl><X>.  The script will finish and the
@@ -119,11 +130,11 @@ Installing: In the downloads directory, extract the .sh file from the
                 sudo apt install iozone3
             After this is done you can run the ioztst.sh and start testing
             To run it without installing or using iozone to run the tests
-                ioztst.sh no
+                ioztst.sh -n
             This will prevent iozone from actually being run although you can
             still step through the menus and see what script files are produced
             in your $basedir/tmptest directory and for the saved files in 
-            /home/tdwyer/.config/ioztst/[Default|Run]
+            /home/$USER/.config/ioztst/[Default|Run]
 
 Hopefully this will introduce people who want to see how their disk system performs
 via an easy introduction to a complex tool designed for high level sysadmins for
